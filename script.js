@@ -38,7 +38,7 @@ function gerarCor(){
 
     //chamando a função de verificar final, para verificar somente quando gerar uma cor
     verificarFinal();
-}
+    }
 //Aplicando a função à todos os quadradinhos
 for(let quadrado of quadradinhos){
     quadrado.onclick = gerarCor;
@@ -58,12 +58,3 @@ function verificarFinal(){
         resposta.innerHTML= "Ainda não foi !!";
     }
 }
-//Função para resetar o jogo, limpando as cores de fundo e trocando o texto de resposta
-function resetarJogo(){
-    for(let quadrado of quadradinhos){
-        quadrado.style.backgroundColor = "unset";
-    }
-    resposta.innerHTML = "Jogo resetado !";
-}
-
-botao.ondblclick = resetarJogo;
