@@ -45,16 +45,27 @@ for(let quadrado of quadradinhos){
 }
 
 //Função que verifica se todos os quadrados estão com a mesma cor
-function verificarFinal(){
+function verificarFinal (){
     if(quadradinhos[0].style.backgroundColor == quadradinhos[1].style.backgroundColor && quadradinhos[1].style.backgroundColor == quadradinhos[2].style.backgroundColor && quadradinhos[2].style.backgroundColor == quadradinhos[3].style.backgroundColor){
-        resposta.innerHTML = "!!! VOCÊ VENCEU !!!";
+        resposta.innerHTML = "Você Venceu!!"
 
         for(let quadrado of quadradinhos){
-            quadrado.onclick = null;
+            // quadrado.onclick = null;
             quadrado.classList.add("virarQuadradinho");
         }  
-    }
-    else{
-        resposta.innerHTML= "Ainda não foi !!";
+    }else{
+        resposta.innerHTML = ""
     }
 }
+
+
+function resetarJogo (){
+    for(let quadrado of quadradinhos){
+        quadrado.style.backgroundColor = "unset"
+        quadrado.onclick = gerarCor;
+    }  
+
+    resposta.innerHTML = "";
+}
+
+botao.onclick = resetarJogo;
