@@ -1,6 +1,6 @@
 # JOGO DAS CORES
 
-##linguagens utilizadas
+## linguagens utilizadas
 - HTML
 - CSS
 - JAVASCRIPT
